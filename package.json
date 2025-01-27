@@ -11,7 +11,7 @@
     "predeploy": "yarn build",
     "deploy": "gh-pages -d dist"
   },
-  "homepage": "https://github.com/Vasanth-dev-200/Portfolio.git",
+  "homepage": "https://Vasanth-dev-200.github.io/Portfolio",
   "dependencies": {
     "dotenv": "^16.4.7",
     "emailjs-com": "^3.2.0",
