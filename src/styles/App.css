@@ -1,0 +1,9 @@
+.validation-success {
+  color: green;
+  font-weight: bold;
+}
+
+.validation-danger {
+  color: red;
+  font-weight: bold;
+}

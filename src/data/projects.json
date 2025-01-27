@@ -1,0 +1,26 @@
+[
+    {
+      "id": 1,
+      "image": "/assets/img/roriri_5050.png",
+      "title": "Roriri 50/50",
+      "description":
+        "Roriri 5050 is a thoughtfully developed platform aimed at engaging students in tech-related events and providing an interactive and rewarding experience. This project allows students to register for various technology-based events and actively participate, earning points as they do so. The platform is designed to motivate and encourage students to engage in these activities by introducing a point-based system. Each time a student participates in an event, they accumulate points based on their level of involvement. These points are stored and tracked in real-time, ensuring that students are always aware of their progress. Furthermore, the system includes an exciting rewards redemption feature, where students can use their earned points to claim prizes and incentives. To ensure a secure and seamless user experience, user authentication and authorization mechanisms have been implemented, providing an extra layer of security for the registration and participation processes. This feature guarantees that only authorized users can access event details, register, and track their points, ensuring a safe and reliable system.",
+      "url": "https://5050developers.roririsoft.com/"
+    },
+    {
+      "id": 2,
+      "image": "/assets/img/roriri_5050_admin.png",
+      "title": "Roriri 50/50 Admin",
+      "description":
+        "The admin dashboard for Roriri 5050 is an essential component designed to facilitate the management and monitoring of the platform's core activities. The dashboard empowers administrators with the tools necessary to create, update, and manage a wide range of events seamlessly. Admins can add new events, set event dates, write descriptions, assign specific point values, and make updates as needed to ensure the event details are accurate and up to date. A real-time tracking system is integrated into the dashboard, allowing administrators to monitor event participation and oversee the points and rankings of each student. This functionality enables administrators to quickly identify the most active participants and ensure fair point distribution. The admin interface is highly intuitive, making it easy for event organizers to oversee the progress and success of the platform. From managing event logistics to monitoring the leaderboard, the admin page is the backbone of the Roriri 5050 system, ensuring the smooth operation of the platform while maintaining fairness and transparency.",
+      "url": "https://admin.5050developers.roririsoft.com/"
+    },
+    {
+      "id": 3,
+      "image": "/assets/img/roriri_quiz.png",
+      "title": "Roriri 50/50 Quiz",
+      "description":
+        "The Quiz Competition Website is an innovative platform designed to provide students with an engaging way to participate in online quiz competitions. This platform is tailored to create a dynamic and interactive experience for students by offering a wide variety of quizzes that test their knowledge on diverse topics. The quizzes are built with a timed response feature, adding an element of excitement and urgency to the competition. Participants must answer each question within a specific time limit, which challenges their ability to think quickly and accurately under pressure. To further enhance the user experience, the platform includes a robust score tracking system that calculates and displays each participant's performance as they progress through the quiz. At the end of each competition, an interactive leaderboard is generated, showcasing the top performers and their respective rankings. This feature not only motivates participants to improve their scores but also fosters a healthy sense of competition among students. The website is designed with user-friendliness in mind, ensuring that students of all skill levels can easily navigate and enjoy the quiz experience, making it a valuable tool for learning and self-assessment.",
+      "url": "https://quiz.roririsoft.com/"
+    }
+  ]

@@ -2,6 +2,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const Projects = ({ projects }) => {
+  const truncateText = (text) => {
+    return text.length > 100 ? text.slice(0, 100) + "..." : text;
+  };
   return (
     <div id="blog-tab" className="tabcontent">
       <div className="pb-2">
@@ -23,7 +26,7 @@ const Projects = ({ projects }) => {
               </div>
               <div className="news-item__caption">
                 <h2 className="title title--h4">{item.title}</h2>
-                <p>{item.description}</p>
+                <p>{truncateText(item.description)}</p>
               </div>
             </article>
           );

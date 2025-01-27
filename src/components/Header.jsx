@@ -23,6 +23,11 @@ const Header = () => {
                 <i className="font-icon icon-linkedin" />
               </a>
             </li>
+            <li>
+              <a href="https://github.com/Vasanth-dev-200" target="_blank">
+                <i className="font-icon icon-github" />
+              </a>
+            </li>
           </ul>
         </div>
       </div>
