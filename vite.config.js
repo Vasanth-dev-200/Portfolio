@@ -4,8 +4,9 @@ import dotenv from "dotenv";
 
 dotenv.config();
 
-// https://vite.dev/config/
+// https://vitejs.dev/config/
 export default defineConfig({
+  base: "/Portfolio/",
   define: {
     "process.env": process.env,
   },
