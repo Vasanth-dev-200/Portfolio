@@ -12,7 +12,7 @@ const Resume = () => {
           <h2 className="title title--h3">
             <img
               className="title-icon"
-              src="../assets/icons/dark/icon-education.svg"
+              src="./assets/icons/dark/icon-education.svg"
               alt=""
             />
             Education
@@ -58,7 +58,7 @@ const Resume = () => {
           <h2 className="title title--h3">
             <img
               className="title-icon"
-              src="../assets/icons/dark/icon-experience.svg"
+              src="./assets/icons/dark/icon-experience.svg"
               alt=""
             />
             Experience

@@ -32,7 +32,7 @@ const About = () => {
             <div className="case-item">
               <img
                 className="case-item__icon"
-                src="../assets/icons/dark/icon-design.svg"
+                src="./assets/icons/dark/icon-design.svg"
                 alt=""
               />
               <div>
@@ -49,7 +49,7 @@ const About = () => {
             <div className="case-item">
               <img
                 className="case-item__icon"
-                src="../assets/icons/dark/icon-dev.svg"
+                src="./assets/icons/dark/icon-dev.svg"
                 alt=""
               />
               <div>
@@ -65,7 +65,7 @@ const About = () => {
             <div className="case-item">
               <img
                 className="case-item__icon"
-                src="../assets/icons/dark/icon-app.svg"
+                src="./assets/icons/dark/icon-app.svg"
                 alt=""
               />
               <div>
@@ -82,7 +82,7 @@ const About = () => {
             <div className="case-item">
               <img
                 className="case-item__icon"
-                src="../assets/icons/dark/icon-education.svg"
+                src="./assets/icons/dark/icon-education.svg"
                 alt=""
               />
               <div>
