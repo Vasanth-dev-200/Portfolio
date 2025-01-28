@@ -10,7 +10,7 @@ import projects from "./data/projects.json";
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={"/Portfolio"}>
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<About />} />
