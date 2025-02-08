@@ -6,6 +6,7 @@
 
 $(document).ready(function () {
   "use strict";
+  let windowWidth = "";
 
   /*-----------------------------------------------------------------
       Detect device mobile
@@ -314,44 +315,44 @@ $(document).ready(function () {
 	  Tabs
     -------------------------------------------------------------------*/
 
-  $(".js-tabs").each(function () {
-    $(".content .tabcontent").hide();
-    $(".content .tabcontent:first").show();
-    $(".nav__item a").on("click", function () {
-      $(".nav__item a").removeClass("active");
-      $(this).addClass("active");
-      var currentTab = $(this).attr("href");
-      $(".content .tabcontent").hide();
-      $(currentTab).show();
-      $portfolioMasonry.isotope({
-        columnWidth: ".gallery-grid__item",
-        gutter: ".gutter-sizer",
-        isAnimated: true,
-      });
-      $(".js-scroll").getNiceScroll().resize();
-      return false;
-    });
+  // $(".js-tabs").each(function () {
+  //   $(".content .tabcontent").hide();
+  //   $(".content .tabcontent:first").show();
+  //   $(".nav__item a").on("click", function () {
+  //     $(".nav__item a").removeClass("active");
+  //     $(this).addClass("active");
+  //     var currentTab = $(this).attr("href");
+  //     $(".content .tabcontent").hide();
+  //     $(currentTab).show();
+  //     $portfolioMasonry.isotope({
+  //       columnWidth: ".gallery-grid__item",
+  //       gutter: ".gutter-sizer",
+  //       isAnimated: true,
+  //     });
+  //     $(".js-scroll").getNiceScroll().resize();
+  //     return false;
+  //   });
 
-    // Mobile close menu
-    var screenMobile = 580;
+  //   // Mobile close menu
+  //   var screenMobile = 580;
 
-    windowWidth = $(window).width();
-    if (windowWidth < screenMobile) {
-      // autoscroll to content
-      $(".nav__item a").click(function (e) {
-        e.preventDefault();
-        var offset = -35;
+  //   windowWidth = $(window).width();
+  //   if (windowWidth < screenMobile) {
+  //     // autoscroll to content
+  //     $(".nav__item a").click(function (e) {
+  //       e.preventDefault();
+  //       var offset = -35;
 
-        $("html, body").animate(
-          {
-            scrollTop: $("#content").offset().top + offset,
-          },
-          0
-        );
-      });
-    } else {
-    }
-  });
+  //       $("html, body").animate(
+  //         {
+  //           scrollTop: $("#content").offset().top + offset,
+  //         },
+  //         0
+  //       );
+  //     });
+  //   } else {
+  //   }
+  // });
 
   /*-----------------------------------------------------------------
       Tooltip
