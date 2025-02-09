@@ -33,5 +33,14 @@
     <script src="./assets/js/jquery-3.4.1.min.js"></script>
     <script src="./assets/js/plugins.min.js"></script>
     <script src="./assets/js/common.js"></script>
+    <script>
+      (function () {
+        var urlParams = new URLSearchParams(window.location.search);
+        var redirectPath = urlParams.get("redirect");
+        if (redirectPath) {
+          window.history.replaceState(null, "", redirectPath);
+        }
+      })();
+    </script>
   </body>
 </html>
