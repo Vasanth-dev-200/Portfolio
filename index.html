@@ -23,7 +23,7 @@
       type="text/css"
       href="./assets/demo/style-demo.css"
     />
-    <script type="module" crossorigin src="/Portfolio/assets/index-HF30QLyZ.js"></script>
+    <script type="module" crossorigin src="/Portfolio/assets/index-CK6OOhTs.js"></script>
     <link rel="stylesheet" crossorigin href="/Portfolio/assets/index-DqIfrvgz.css">
   </head>
   <body class="bg-triangles">
@@ -34,5 +34,14 @@
     <script src="./assets/js/jquery-3.4.1.min.js"></script>
     <script src="./assets/js/plugins.min.js"></script>
     <script src="./assets/js/common.js"></script>
+    <script>
+      (function () {
+        var urlParams = new URLSearchParams(window.location.search);
+        var redirectPath = urlParams.get("redirect");
+        if (redirectPath) {
+          window.history.replaceState(null, "", redirectPath);
+        }
+      })();
+    </script>
   </body>
 </html>
