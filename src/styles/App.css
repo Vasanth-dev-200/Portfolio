@@ -1,9 +1,20 @@
 .validation-success {
-  color: green;
+  color: rgb(0, 255, 0);
   font-weight: bold;
 }
 
 .validation-danger {
-  color: red;
+  color: rgb(255, 82, 82);
   font-weight: bold;
+}
+
+.no-arrows {
+  -webkit-appearance: none;
+  -moz-appearance: textfield;
+}
+
+.no-arrows::-webkit-inner-spin-button,
+.no-arrows::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }

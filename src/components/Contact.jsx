@@ -1,12 +1,15 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import emailjs from "emailjs-com";
+import axios from "axios";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     message: "",
+    phone: "",
+    subject: "",
+    access_key: process.env.ACCESS_KEY,
   });
   const [messageStatus, setMessageStatus] = useState("");
   const navigate = useNavigate();
@@ -19,35 +22,50 @@ const Contact = () => {
   };
 
   // Handle form submission
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setIsLoading(!isLoading);
+  const handleSubmit = async (event) => {
+    event.preventDefault();
 
-    // Validate form fields
-    if (!formData.name || !formData.email || !formData.message) {
-      setMessageStatus("Please fill in the form...");
+    setMessageStatus(""); // Clear previous messages
+
+    // Validate required fields
+    if (
+      !formData.name ||
+      !formData.email ||
+      !formData.message ||
+      !formData.subject
+    ) {
+      setMessageStatus("Please fill in all required fields.");
       return;
     }
 
-    emailjs
-      .send(
-        process.env.SERVICE_ID,
-        process.env.TEMPLATE_ID,
+    // Validate phone number (if provided)
+    if (formData.phone) {
+      const phoneRegex = /^[0-9]{10}$/;
+      if (!phoneRegex.test(formData.phone)) {
+        setMessageStatus("Phone number must be exactly 10 digits.");
+        return;
+      }
+    }
+
+    setIsLoading(true);
+
+    try {
+      const response = await axios.post(
+        "https://api.web3forms.com/submit",
         formData,
-        process.env.USER_ID
-      )
-      .then(
-        (response) => {
-          setMessageStatus("Message sent successfully!");
-          setFormData({ name: "", email: "", message: "" });
-          navigate("/");
-          setIsLoading(!isLoading);
-        },
-        (error) => {
-          setMessageStatus("Failed to send message. Please try again.");
-          console.error("FAILED...", error);
+        {
+          headers: { "Content-Type": "multipart/form-data" },
         }
       );
+      setIsLoading(false);
+      setMessageStatus(response.data?.message);
+      setTimeout(() => {
+        navigate("/");
+      }, 1000);
+    } catch (err) {
+      setIsLoading(false);
+      setMessageStatus("Faild to send message!");
+    }
   };
 
   return (
@@ -66,7 +84,6 @@ const Contact = () => {
               id="nameContact"
               name="name"
               placeholder="Full name"
-              required
               value={formData.name}
               onChange={handleChange}
             />
@@ -79,8 +96,32 @@ const Contact = () => {
               id="emailContact"
               name="email"
               placeholder="Email address"
-              required
               value={formData.email}
+              onChange={handleChange}
+            />
+          </div>
+
+          <div className="form-group col-12 col-md-6">
+            <input
+              type="number"
+              className="form-control no-arrows"
+              id="phoneContact"
+              name="phone"
+              placeholder="Phone Number (Optional)"
+              value={formData.phone}
+              min={1}
+              onChange={handleChange}
+            />
+          </div>
+
+          <div className="form-group col-12 col-md-6">
+            <input
+              type="text"
+              className="form-control"
+              id="subjectContact"
+              name="subject"
+              placeholder="Subject"
+              value={formData.subject}
               onChange={handleChange}
             />
           </div>
@@ -92,7 +133,6 @@ const Contact = () => {
               name="message"
               placeholder="Your Message"
               rows={4}
-              required
               value={formData.message}
               onChange={handleChange}
             />
