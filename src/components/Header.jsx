@@ -1,19 +1,20 @@
 import React, { useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
+// import { useLocation } from "react-router-dom";
 
 const Header = () => {
-  const location = useLocation().pathname;
+  // Comented code for browser router
+  // const location = useLocation().pathname;
   const [imageUrl, setImageUrl] = useState("./assets/img/main-photo.svg");
 
-  useEffect(() => {
-    const isProjectPage = location.includes("/project/");
+  // useEffect(() => {
+  //   const isProjectPage = location.includes("/project/");
 
-    const img = isProjectPage
-      ? "../assets/img/main-photo.svg"
-      : "./assets/img/main-photo.svg";
+  //   const img = isProjectPage
+  //     ? "../assets/img/main-photo.svg"
+  //     : "./assets/img/main-photo.svg";
 
-    setImageUrl(img);
-  }, [location]);
+  //   setImageUrl(img);
+  // }, [location]);
 
   return (
     <header className="header box">

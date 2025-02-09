@@ -6,6 +6,8 @@ const ProjectDetail = ({ projects }) => {
   const param = useParams().id;
   const [projectData, setProjectData] = useState("");
 
+  // Comented code for browser router
+
   useEffect(() => {
     const project = projects.find((item) => Number(item.id) === Number(param));
     setProjectData(project);
@@ -22,10 +24,11 @@ const ProjectDetail = ({ projects }) => {
             <div className="header-post__image-wrap">
               <img
                 className="cover lazyload"
-                src={
-                  `.${projectData.image}` ||
-                  "../assets/images/default-fallback-image.png"
-                }
+                src={projectData.image}
+                // src={
+                //   `.${projectData.image}` ||
+                //   "../assets/images/default-fallback-image.png"
+                // }
                 alt={projectData.title}
               />
             </div>
